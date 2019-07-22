@@ -1,0 +1,21 @@
+user_en@lab-29:/$ source /opt/ros/melodic/setup.bash
+user_en@lab-29:/$ roscd
+user_en@lab-29:/opt/ros/melodic$ cd -
+/
+user_en@lab-29:/$ source /o^C
+user_en@lab-29:/$ cd ~/catkin_ws
+user_en@lab-29:~/catkin_ws$ catkin_make
+Base path: /home/user_en/catkin_ws
+Source space: /home/user_en/catkin_ws/src
+Build space: /home/user_en/catkin_ws/build
+Devel space: /home/user_en/catkin_ws/devel
+Install space: /home/user_en/catkin_ws/install
+####
+#### Running command: "make cmake_check_build_system" in "/home/user_en/catkin_ws/build"
+####
+####
+#### Running command: "make -j4 -l4" in "/home/user_en/catkin_ws/build"
+####
+user_en@lab-29:~/catkin_ws$ source devel/setup.bash
+user_en@lab-29:~/catkin_ws$ echo $ROS_PACKAGE_PATH
+/home/user_en/catkin_ws/src:/opt/ros/melodic/share
