@@ -1,0 +1,22 @@
+user_en@lab-29:~/catkin_ws$ cd src/anro-team-2/beginner_tutorials/
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials$ ls
+build  CMakeLists.txt  include  launch  package.xml  scripts  src
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials$ ls
+build  CMakeLists.txt  include  launch  package.xml  scripts  src
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials$ roscd beginner_tutorials/
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials$ mkdir srv
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials$ ls
+build  CMakeLists.txt  include  launch  package.xml  scripts  src  srv
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials$ cd s
+bash: cd: s: No such file or directory
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials$ ls
+build  CMakeLists.txt  include  launch  package.xml  scripts  src  srv
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials$ roscp rospy_tutorials AddTwoInts.srv srv/AddTwoInts.srv
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials$ rossrv show beginner_tutorials/AddTwoInts
+int64 a
+int64 b
+---
+int64 sum
+
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials$ roscd beginner_tutorials
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials$ cd ../..
