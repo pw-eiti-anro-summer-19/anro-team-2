@@ -1,0 +1,789 @@
+user_en@lab-29:~/catkin_ws$ rostopic list
+
+Command 'rostopic' not found, but can be installed with:
+
+apt install python-rostopic
+Please ask your administrator.
+
+user_en@lab-29:~/catkin_ws$ roscd
+
+Command 'roscd' not found, did you mean:
+
+  command 'rosco' from deb python-rosinstall
+
+Try: apt install <deb name>
+
+user_en@lab-29:~/catkin_ws$ source ~/.bashrc 
+user_en@lab-29:~/catkin_ws$ nano ~/.bashrc 
+user_en@lab-29:~/catkin_ws$ source ~/.bashrc 
+user_en@lab-29:~/catkin_ws$ roscd
+user_en@lab-29:/opt/ros/melodic$ rostopic list
+ERROR: Unable to communicate with master!
+user_en@lab-29:/opt/ros/melodic$ rostopic list
+/rosout
+/rosout_agg
+user_en@lab-29:/opt/ros/melodic$ rosnode list
+ERROR: Unable to communicate with master!
+user_en@lab-29:/opt/ros/melodic$ rosrun rqt_console rqt_console
+rosrun rqt_logger_level rqt_logger_level
+^Cuser_en@lab-29:/opt/ros/melodic$ rosrun rqt_logger_level rqt_logger_level
+^Cuser_en@lab-29:/opt/ros/melodic$ rosrun turtlesim turtlesim_node
+[ INFO] [1563894332.703193521]: Starting turtlesim with node name /turtlesim
+[ INFO] [1563894332.706557160]: Spawning turtle [turtle1] at x=[5.544445], y=[5.544445], theta=[0.000000]
+^C
+user_en@lab-29:/opt/ros/melodic$ rosrun rqt_logger_level rqt_logger_level
+rostopic pub /turtle1/command_velocity turtlesim/Velocity -r 1 -- 2.0  0.0
+^Cuser_en@lab-29:/opt/ros/melodic$ rostopic pub /turtle1/command_velocity turtles/Velocity -r 1 -- 2.0  0.0
+the rosdep view is empty: call 'sudo rosdep init' and 'rosdep update'
+ERROR: invalid message type: turtlesim/Velocity.
+If this is a valid message type, perhaps you need to type 'rosmake turtlesim'
+user_en@lab-29:/opt/ros/melodic$ rostopic pub /turtle1/cmd_vel geometry_msgs/Twist -r 1 -- '[2.0, 0.0, 0.0]' '[0.0, 0.0, 0.0]'
+^Cuser_en@lab-29:/opt/ros/melodic$ roslaunch [package] [filename.launch]
+RLException: [[filename.launch]] is neither a launch file in package [[package]] nor is [[package]] a launch file name
+The traceback for the exception was written to the log file
+user_en@lab-29:/opt/ros/melodic$ roslaunch beginner_tutorials turtlemimic.launch
+RLException: [turtlemimic.launch] is neither a launch file in package [beginner_tutorials] nor is [beginner_tutorials] a launch file name
+The traceback for the exception was written to the log file
+user_en@lab-29:/opt/ros/melodic$ ^C
+user_en@lab-29:/opt/ros/melodic$ roslaunch beginner_tutorials turtlemimic.launch
+RLException: [turtlemimic.launch] is neither a launch file in package [beginner_tutorials] nor is [beginner_tutorials] a launch file name
+The traceback for the exception was written to the log file
+user_en@lab-29:/opt/ros/melodic$ rescore
+
+Command 'rescore' not found, did you mean:
+
+  command 'roscore' from deb python-roslaunch
+  command 'restore' from deb dump
+
+Try: apt install <deb name>
+
+user_en@lab-29:/opt/ros/melodic$ ^C
+user_en@lab-29:/opt/ros/melodic$ oslaunch beginner_tutorials turtlemimic.launch
+
+Command 'oslaunch' not found, did you mean:
+
+  command 'roslaunch' from deb python-roslaunch
+
+Try: apt install <deb name>
+
+user_en@lab-29:/opt/ros/melodic$ roslaunch beginner_tutorials turtlemimic.launch
+RLException: [turtlemimic.launch] is neither a launch file in package [beginner_tutorials] nor is [beginner_tutorials] a launch file name
+The traceback for the exception was written to the log file
+user_en@lab-29:/opt/ros/melodic$ rescore
+
+Command 'rescore' not found, did you mean:
+
+  command 'restore' from deb dump
+  command 'roscore' from deb python-roslaunch
+
+Try: apt install <deb name>
+
+user_en@lab-29:/opt/ros/melodic$ ^C
+user_en@lab-29:/opt/ros/melodic$ roslaunch beginner_tutorials turtlemimic.launch
+RLException: [turtlemimic.launch] is neither a launch file in package [beginner_tutorials] nor is [beginner_tutorials] a launch file name
+The traceback for the exception was written to the log file
+user_en@lab-29:/opt/ros/melodic$ roslaunch beginner_tutorials turtlemimic.launch
+RLException: [turtlemimic.launch] is neither a launch file in package [beginner_tutorials] nor is [beginner_tutorials] a launch file name
+The traceback for the exception was written to the log file
+user_en@lab-29:/opt/ros/melodic$ ^C
+user_en@lab-29:/opt/ros/melodic$ roscore
+... logging to /home/user_en/.ros/log/8fcd3162-ad5d-11e9-bdf2-ecb1d73531a3/roslaunch-lab-29-12014.log
+Checking log directory for disk usage. This may take awhile.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+
+started roslaunch server http://lab-29:46007/
+ros_comm version 1.14.3
+
+
+SUMMARY
+========
+
+PARAMETERS
+ * /rosdistro: melodic
+ * /rosversion: 1.14.3
+
+NODES
+
+auto-starting new master
+process[master]: started with pid [12024]
+ROS_MASTER_URI=http://lab-29:11311/
+
+setting /run_id to 8fcd3162-ad5d-11e9-bdf2-ecb1d73531a3
+process[rosout-1]: started with pid [12035]
+started core service [/rosout]
+^C[rosout-1] killing on exit
+[master] killing on exit
+shutting down processing monitor...
+... shutting down processing monitor complete
+done
+user_en@lab-29:/opt/ros/melodic$ roslaunch beginner_tutorials turtlemimic.launch
+RLException: [turtlemimic.launch] is neither a launch file in package [beginner_tutorials] nor is [beginner_tutorials] a launch file name
+The traceback for the exception was written to the log file
+user_en@lab-29:/opt/ros/melodic$ rostopic pub /turtlesim1/turtle1/cmd_vel geometry_msgs/Twist -r 1 -- '[2.0, 0.0, 0.0]' '[0.0, 0.0, -1.8]'
+
+
+
+
+user_en@lab-29:~$ sudo apt-get install ros-<distro>-ros-tutorials
+bash: distro: No such file or directory
+user_en@lab-29:~$ sudo apt-get install ros-melodic-ros-tutorials
+[sudo] password for user_en: 
+Sorry, try again.
+[sudo] password for user_en: 
+Sorry, try again.
+[sudo] password for user_en: 
+user_en is not in the sudoers file.  This incident will be reported.
+user_en@lab-29:~$ ls
+anro-team-2  Documents  examples.desktop  max_super_star  Public
+catkin_ws    Downloads  example.txt       Music           Templates
+Desktop      example    git               Pictures        Videos
+user_en@lab-29:~$ ^C
+user_en@lab-29:~$ sudo apt-get install ros-melodic-ros-tutorials
+[sudo] password for user_en: 
+user_en@lab-29:~$ ^C
+user_en@lab-29:~$ sudo apt-get install ros-melodic-ros-tutorials
+[sudo] password for user_en: 
+Sorry, try again.
+[sudo] password for user_en: 
+xhSorry, try again.
+[sudo] password for user_en: 
+cxhsudo: 3 incorrect password attempts
+user_en@lab-29:~$ cxh^C
+user_en@lab-29:~$ roscd [locationname[/subdir]]
+
+Command 'roscd' not found, did you mean:
+
+  command 'rosco' from deb python-rosinstall
+
+Try: apt install <deb name>
+
+user_en@lab-29:~$ ^C
+user_en@lab-29:~$ roscd roscpp
+
+Command 'roscd' not found, did you mean:
+
+  command 'rosco' from deb python-rosinstall
+
+Try: apt install <deb name>
+
+user_en@lab-29:~$ catkin_ws roscpp
+catkin_ws: command not found
+user_en@lab-29:~$ roscd catkin_ws
+
+Command 'roscd' not found, did you mean:
+
+  command 'rosco' from deb python-rosinstall
+
+Try: apt install <deb name>
+
+user_en@lab-29:~$ pwd
+/home/user_en
+user_en@lab-29:~$ ls-l
+ls-l: command not found
+user_en@lab-29:~$ ls -l
+total 68
+drwxr-xr-x 3 user_en user_en 4096 lip 22 15:55 anro-team-2
+drwxr-xr-x 5 user_en user_en 4096 lip 22 18:07 catkin_ws
+drwxr-xr-x 3 user_en user_en 4096 lip 22 18:10 Desktop
+drwxr-xr-x 2 user_en user_en 4096 lip 22 15:10 Documents
+drwxr-xr-x 2 user_en user_en 4096 lip 22 18:57 Downloads
+-rw-r--r-- 1 user_en user_en   38 lip 22 17:27 example
+-rw-r--r-- 1 user_en user_en 8980 lip 17 21:22 examples.desktop
+-rw-r--r-- 1 user_en user_en   11 lip 22 17:16 example.txt
+drwxr-xr-x 3 user_en user_en 4096 lip 22 18:49 git
+drwxr-xr-x 5 user_en user_en 4096 lip 22 18:12 max_super_star
+drwxr-xr-x 2 user_en user_en 4096 lip 22 15:10 Music
+drwxr-xr-x 2 user_en user_en 4096 lip 22 15:10 Pictures
+drwxr-xr-x 2 user_en user_en 4096 lip 22 15:10 Public
+drwxr-xr-x 2 user_en user_en 4096 lip 22 15:10 Templates
+drwxr-xr-x 2 user_en user_en 4096 lip 22 15:10 Videos
+user_en@lab-29:~$ cd
+user_en@lab-29:~$ rospack find catkin_ws
+
+Command 'rospack' not found, but can be installed with:
+
+apt install rospack-tools
+Please ask your administrator.
+
+user_en@lab-29:~$ catkin_ws [locationname[/subdir]]
+catkin_ws: command not found
+user_en@lab-29:~$ example.txt [locationname[/subdir]]
+example.txt: command not found
+user_en@lab-29:~$ pwd
+/home/user_en
+user_en@lab-29:~$ ped -l
+
+Command 'ped' not found, but there are 16 similar ones.
+
+user_en@lab-29:~$ pwd -l
+bash: pwd: -l: invalid option
+pwd: usage: pwd [-LP]
+user_en@lab-29:~$ roscd [locationname[/subdir]]
+
+Command 'roscd' not found, did you mean:
+
+  command 'rosco' from deb python-rosinstall
+
+Try: apt install <deb name>
+
+user_en@lab-29:~$ ls
+anro-team-2  Documents  examples.desktop  max_super_star  Public
+catkin_ws    Downloads  example.txt       Music           Templates
+Desktop      example    git               Pictures        Videos
+user_en@lab-29:~$ cd catkin_ws/
+user_en@lab-29:~/catkin_ws$ source devel/setup.bash 
+user_en@lab-29:~/catkin_ws$ roscd [locationname[/subdir]]
+roscd: No such package/stack '[locationname[/subdir]]'
+user_en@lab-29:~/catkin_ws$ roscd roscpp
+user_en@lab-29:/opt/ros/melodic/share/roscpp$ cd
+user_en@lab-29:~$ cd catkin_ws/
+user_en@lab-29:~/catkin_ws$ ls src/
+CMakeLists.txt
+user_en@lab-29:~/catkin_ws$ cd src/
+user_en@lab-29:~/catkin_ws/src$ git clone https://github.com/pw-eiti-anro-summer-19/anro-team-2.git
+Cloning into 'anro-team-2'...
+remote: Enumerating objects: 16, done.
+remote: Counting objects: 100% (16/16), done.
+remote: Compressing objects: 100% (12/12), done.
+remote: Total 16 (delta 2), reused 6 (delta 0), pack-reused 0
+Unpacking objects: 100% (16/16), done.
+user_en@lab-29:~/catkin_ws/src$ ls
+anro-team-2  CMakeLists.txt
+user_en@lab-29:~/catkin_ws/src$ cd anro-team-2/
+user_en@lab-29:~/catkin_ws/src/anro-team-2$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+user_en@lab-29:~/catkin_ws/src/anro-team-2$ git mv catkin_ws/
+.catkin_workspace  src/               
+user_en@lab-29:~/catkin_ws/src/anro-team-2$ git mv catkin_ws/src/
+CMakeLists.txt  HelloLab1       
+user_en@lab-29:~/catkin_ws/src/anro-team-2$ git mv catkin_ws/src/CMakeLists.txt lab1/CMakeLists.txt
+user_en@lab-29:~/catkin_ws/src/anro-team-2$ git mv catkin_ws/src/HelloLab1 lab1/HelloLab1
+user_en@lab-29:~/catkin_ws/src/anro-team-2$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	renamed:    catkin_ws/src/CMakeLists.txt -> lab1/CMakeLists.txt
+	renamed:    catkin_ws/src/HelloLab1 -> lab1/HelloLab1
+
+user_en@lab-29:~/catkin_ws/src/anro-team-2$ git rm -rf catkin_ws
+rm 'catkin_ws/.catkin_workspace'
+user_en@lab-29:~/catkin_ws/src/anro-team-2$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	deleted:    catkin_ws/.catkin_workspace
+	renamed:    catkin_ws/src/CMakeLists.txt -> lab1/CMakeLists.txt
+	renamed:    catkin_ws/src/HelloLab1 -> lab1/HelloLab1
+
+user_en@lab-29:~/catkin_ws/src/anro-team-2$ git commit -m "lab 1"
+[master a2e2984] lab 1
+ 3 files changed, 1 deletion(-)
+ delete mode 100644 catkin_ws/.catkin_workspace
+ rename {catkin_ws/src => lab1}/CMakeLists.txt (100%)
+ rename {catkin_ws/src => lab1}/HelloLab1 (100%)
+user_en@lab-29:~/catkin_ws/src/anro-team-2$ git push
+Username for 'https://github.com': fangyunpingandzhaojingqi
+Password for 'https://fangyunpingandzhaojingqi@github.com': 
+Counting objects: 2, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 347 bytes | 347.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0)
+To https://github.com/pw-eiti-anro-summer-19/anro-team-2.git
+   693f1c8..a2e2984  master -> master
+user_en@lab-29:~/catkin_ws/src/anro-team-2$ cd ..
+user_en@lab-29:~/catkin_ws/src$ cd ..
+user_en@lab-29:~/catkin_ws$ cat
+cat                        catkin_make_isolated
+catchsegv                  catkin_package_version
+catkin_create_pkg          catkin_prepare_release
+catkin_find                catkin_tag_changelog
+catkin_find_pkg            catkin_test_changelog
+catkin_generate_changelog  catkin_test_results
+catkin_init_workspace      catkin_topological_order
+catkin_make                catman
+user_en@lab-29:~/catkin_ws$ cat
+cat                        catkin_make_isolated
+catchsegv                  catkin_package_version
+catkin_create_pkg          catkin_prepare_release
+catkin_find                catkin_tag_changelog
+catkin_find_pkg            catkin_test_changelog
+catkin_generate_changelog  catkin_test_results
+catkin_init_workspace      catkin_topological_order
+catkin_make                catman
+user_en@lab-29:~/catkin_ws$ catkin_make
+Base path: /home/user_en/catkin_ws
+Source space: /home/user_en/catkin_ws/src
+Build space: /home/user_en/catkin_ws/build
+Devel space: /home/user_en/catkin_ws/devel
+Install space: /home/user_en/catkin_ws/install
+####
+#### Running command: "make cmake_check_build_system" in "/home/user_en/catkin_ws/build"
+####
+####
+#### Running command: "make -j4 -l4" in "/home/user_en/catkin_ws/build"
+####
+user_en@lab-29:~/catkin_ws$ <description>The beginner_tutorials package</description>
+bash: syntax error near unexpected token `newline'
+user_en@lab-29:~/catkin_ws$ The beginner_tutorials package
+
+Command 'The' not found, did you mean:
+
+  command 'the' from deb the
+  command 'he' from deb node-he
+
+Try: apt install <deb name>
+
+user_en@lab-29:~/catkin_ws$ ls
+build  devel  src
+user_en@lab-29:~/catkin_ws$ cd src/
+user_en@lab-29:~/catkin_ws/src$ ls
+anro-team-2  CMakeLists.txt
+user_en@lab-29:~/catkin_ws/src$ cd anro-team-2/
+user_en@lab-29:~/catkin_ws/src/anro-team-2$ ls
+ HelloPoland.txt   lab1   README.md  'the first test'
+user_en@lab-29:~/catkin_ws/src/anro-team-2$ catkin_create_pkg beginner_tutorials std_msgs rospy roscpp
+Created file beginner_tutorials/package.xml
+Created file beginner_tutorials/CMakeLists.txt
+Created folder beginner_tutorials/include/beginner_tutorials
+Created folder beginner_tutorials/src
+Successfully created files in /home/user_en/catkin_ws/src/anro-team-2/beginner_tutorials. Please adjust the values in package.xml.
+user_en@lab-29:~/catkin_ws/src/anro-team-2$ ls
+ beginner_tutorials   HelloPoland.txt   lab1   README.md  'the first test'
+user_en@lab-29:~/catkin_ws/src/anro-team-2$ cd beginner_tutorials/
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials$ ls
+CMakeLists.txt  include  package.xml  src
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials$ cd ..
+user_en@lab-29:~/catkin_ws/src/anro-team-2$ cd ..
+user_en@lab-29:~/catkin_ws/src$ cd ..
+user_en@lab-29:~/catkin_ws$ catkin_make
+Base path: /home/user_en/catkin_ws
+Source space: /home/user_en/catkin_ws/src
+Build space: /home/user_en/catkin_ws/build
+Devel space: /home/user_en/catkin_ws/devel
+Install space: /home/user_en/catkin_ws/install
+####
+#### Running command: "cmake /home/user_en/catkin_ws/src -DCATKIN_DEVEL_PREFIX=/home/user_en/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/user_en/catkin_ws/install -G Unix Makefiles" in "/home/user_en/catkin_ws/build"
+####
+-- Using CATKIN_DEVEL_PREFIX: /home/user_en/catkin_ws/devel
+-- Using CMAKE_PREFIX_PATH: /home/user_en/catkin_ws/devel;/opt/ros/melodic
+-- This workspace overlays: /home/user_en/catkin_ws/devel;/opt/ros/melodic
+-- Found PythonInterp: /usr/bin/python2 (found suitable version "2.7.15", minimum required is "2") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python2
+-- Using Debian Python package layout
+-- Using empy: /usr/bin/empy
+-- Using CATKIN_ENABLE_TESTING: ON
+-- Call enable_testing()
+-- Using CATKIN_TEST_RESULTS_DIR: /home/user_en/catkin_ws/build/test_results
+-- Found gmock sources under '/usr/src/googletest': gmock will be built
+-- Found PythonInterp: /usr/bin/python2 (found version "2.7.15") 
+-- Found gtest sources under '/usr/src/googletest': gtests will be built
+-- Using Python nosetests: /usr/bin/nosetests-2.7
+-- catkin 0.7.17
+-- BUILD_SHARED_LIBS is on
+-- BUILD_SHARED_LIBS is on
+-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-- ~~  traversing 1 packages in topological order:
+-- ~~  - beginner_tutorials
+-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-- +++ processing catkin package: 'beginner_tutorials'
+-- ==> add_subdirectory(anro-team-2/beginner_tutorials)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/user_en/catkin_ws/build
+####
+#### Running command: "make -j4 -l4" in "/home/user_en/catkin_ws/build"
+####
+user_en@lab-29:~/catkin_ws$ ls
+build  devel  src
+user_en@lab-29:~/catkin_ws$ cd src/
+user_en@lab-29:~/catkin_ws/src$ ls
+anro-team-2  CMakeLists.txt
+user_en@lab-29:~/catkin_ws/src$ cd anro-team-2/
+user_en@lab-29:~/catkin_ws/src/anro-team-2$ ls
+ beginner_tutorials   HelloPoland.txt   lab1   README.md  'the first test'
+user_en@lab-29:~/catkin_ws/src/anro-team-2$ cd beginner_tutorials/
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials$ ls
+CMakeLists.txt  include  package.xml  src
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials$ nano package.xml 
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials$ 
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials$ 
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials$ source /opt/ros/%YOUR_ROS_DISTRO%/setup.bash
+bash: /opt/ros/%YOUR_ROS_DISTRO%/setup.bash: No such file or directory
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials$ source /opt/ros/^COUR_ROS_DISTRO%/setup.bash
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials$ source source ^C
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials$ source /home/user_en/catkin_ws/build
+bash: source: /home/user_en/catkin_ws/build: is a directory
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials$ catkin_make [make_targets] [-DCMAKE_VARIABLES=...]
+Base path: /home/user_en/catkin_ws/src/anro-team-2/beginner_tutorials
+The specified base path "/home/user_en/catkin_ws/src/anro-team-2/beginner_tutorials" contains a package but "catkin_make" must be invoked in the root of workspace
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials$ catkin_make [anro-team-2] [/home/user_en/catkin_ws/src/anro-team-2/beginner_tutorials]
+Base path: /home/user_en/catkin_ws/src/anro-team-2/beginner_tutorials
+The specified base path "/home/user_en/catkin_ws/src/anro-team-2/beginner_tutorials" contains a package but "catkin_make" must be invoked in the root of workspace
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials$ mkdir build
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials$ cd build
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials/build$ cmake
+Usage
+
+  cmake [options] <path-to-source>
+  cmake [options] <path-to-existing-build>
+
+Specify a source directory to (re-)generate a build system for it in the
+current working directory.  Specify an existing build directory to
+re-generate its build system.
+
+Run 'cmake --help' for more information.
+
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials/build$ make
+make: *** No targets specified and no makefile found.  Stop.
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials/build$ make install  # (optionally)
+make: *** No rule to make target 'install'.  Stop.
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials/build$ make installmake: *** No rule to make target 'install'.  Stop.
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials/build$ catkin_make
+Base path: /home/user_en/catkin_ws/src/anro-team-2/beginner_tutorials/build
+The specified source space "/home/user_en/catkin_ws/src/anro-team-2/beginner_tutorials/build/src" does not exist
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials/build$ cd ~/catkin_ws/
+user_en@lab-29:~/catkin_ws$ ls src
+anro-team-2  CMakeLists.txt
+user_en@lab-29:~/catkin_ws$ catkin_make
+Base path: /home/user_en/catkin_ws
+Source space: /home/user_en/catkin_ws/src
+Build space: /home/user_en/catkin_ws/build
+Devel space: /home/user_en/catkin_ws/devel
+Install space: /home/user_en/catkin_ws/install
+####
+#### Running command: "make cmake_check_build_system" in "/home/user_en/catkin_ws/build"
+####
+####
+#### Running command: "make -j4 -l4" in "/home/user_en/catkin_ws/build"
+####
+user_en@lab-29:~/catkin_ws$ ls
+build  devel  src
+user_en@lab-29:~/catkin_ws$ sudo apt-get install ros-melodic-ros-tutorials
+[sudo] password for user_en: 
+Sorry, try again.
+[sudo] password for user_en: 
+Sorry, try again.
+[sudo] password for user_en: 
+
+
+
+sudo: 3 incorrect password attempts
+user_en@lab-29:~/catkin_ws$ 
+user_en@lab-29:~/catkin_ws$ 
+user_en@lab-29:~/catkin_ws$ 
+user_en@lab-29:~/catkin_ws$ roscore
+... logging to /home/user_en/.ros/log/ab25655c-ad57-11e9-bdf2-ecb1d73531a3/roslaunch-lab-29-10980.log
+Checking log directory for disk usage. This may take awhile.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+
+started roslaunch server http://lab-29:36975/
+ros_comm version 1.14.3
+
+
+SUMMARY
+========
+
+PARAMETERS
+ * /rosdistro: melodic
+ * /rosversion: 1.14.3
+
+NODES
+
+auto-starting new master
+process[master]: started with pid [10991]
+ROS_MASTER_URI=http://lab-29:11311/
+
+setting /run_id to ab25655c-ad57-11e9-bdf2-ecb1d73531a3
+process[rosout-1]: started with pid [11002]
+started core service [/rosout]
+rosnode list
+
+
+
+
+cd ..
+^[^[^[
+^C[rosout-1] killing on exit
+[master] killing on exit
+shutting down processing monitor...
+... shutting down processing monitor complete
+done
+user_en@lab-29:~/catkin_ws$ ^C
+user_en@lab-29:~/catkin_ws$ roscore
+... logging to /home/user_en/.ros/log/1dac5dae-ad5a-11e9-bdf2-ecb1d73531a3/roslaunch-lab-29-11317.log
+Checking log directory for disk usage. This may take awhile.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+
+started roslaunch server http://lab-29:37685/
+ros_comm version 1.14.3
+
+
+SUMMARY
+========
+
+PARAMETERS
+ * /rosdistro: melodic
+ * /rosversion: 1.14.3
+
+NODES
+
+auto-starting new master
+process[master]: started with pid [11327]
+ROS_MASTER_URI=http://lab-29:11311/
+
+setting /run_id to 1dac5dae-ad5a-11e9-bdf2-ecb1d73531a3
+process[rosout-1]: started with pid [11338]
+started core service [/rosout]
+^C[rosout-1] killing on exit
+[master] killing on exit
+shutting down processing monitor...
+... shutting down processing monitor complete
+done
+user_en@lab-29:~/catkin_ws$ rosnode list
+ERROR: Unable to communicate with master!
+user_en@lab-29:~/catkin_ws$ rosnode info /rosout
+--------------------------------------------------------------------------------
+ERROR: Unable to communicate with master!
+user_en@lab-29:~/catkin_ws$ ^C
+user_en@lab-29:~/catkin_ws$ rosnode info /rosout
+--------------------------------------------------------------------------------
+ERROR: Unable to communicate with master!
+user_en@lab-29:~/catkin_ws$ sudo apt-get install ros-melodic-rqt ros-melodic-rqt-common-plugins ros-melodic-turtlesim
+[sudo] password for user_en: 
+user_en@lab-29:~/catkin_ws$ rosrun rqt_console rqt_console
+PluginManager._load_plugin() could not load plugin "rqt_console/Console": RosPyPluginProvider._init_node() could not find ROS master
+user_en@lab-29:~/catkin_ws$ rosrun rqt_logger_level rqt_logger_level
+PluginManager._load_plugin() could not load plugin "rqt_logger_level/LoggerLevel": RosPyPluginProvider._init_node() could not find ROS master
+user_en@lab-29:~/catkin_ws$ roscore
+... logging to /home/user_en/.ros/log/00278dca-ad5b-11e9-bdf2-ecb1d73531a3/roslaunch-lab-29-11424.log
+Checking log directory for disk usage. This may take awhile.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+
+started roslaunch server http://lab-29:42419/
+ros_comm version 1.14.3
+
+
+SUMMARY
+========
+
+PARAMETERS
+ * /rosdistro: melodic
+ * /rosversion: 1.14.3
+
+NODES
+
+auto-starting new master
+process[master]: started with pid [11434]
+ROS_MASTER_URI=http://lab-29:11311/
+
+setting /run_id to 00278dca-ad5b-11e9-bdf2-ecb1d73531a3
+process[rosout-1]: started with pid [11445]
+started core service [/rosout]
+^C[rosout-1] killing on exit
+[master] killing on exit
+shutting down processing monitor...
+... shutting down processing monitor complete
+done
+user_en@lab-29:~/catkin_ws$ roscd beginner_tutorials
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials$ mkdir launch
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials$ cd launch
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials/launch$ roslaunch beginner_tutorials turtlemimic.launch
+RLException: [turtlemimic.launch] is neither a launch file in package [beginner_tutorials] nor is [beginner_tutorials] a launch file name
+The traceback for the exception was written to the log file
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials/launch$ rescore
+
+Command 'rescore' not found, did you mean:
+
+  command 'roscore' from deb python-roslaunch
+  command 'restore' from deb dump
+
+Try: apt install <deb name>
+
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials/launch$ ^C
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials/launch$ roscore
+... logging to /home/user_en/.ros/log/6765c35c-ad5c-11e9-bdf2-ecb1d73531a3/roslaunch-lab-29-11738.log
+Checking log directory for disk usage. This may take awhile.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+
+started roslaunch server http://lab-29:38561/
+ros_comm version 1.14.3
+
+
+SUMMARY
+========
+
+PARAMETERS
+ * /rosdistro: melodic
+ * /rosversion: 1.14.3
+
+NODES
+
+auto-starting new master
+process[master]: started with pid [11749]
+ROS_MASTER_URI=http://lab-29:11311/
+
+setting /run_id to 6765c35c-ad5c-11e9-bdf2-ecb1d73531a3
+process[rosout-1]: started with pid [11760]
+started core service [/rosout]
+roslaunch beginner_tutorials turtlemimic.launch
+^C[rosout-1] killing on exit
+[master] killing on exit
+shutting down processing monitor...
+... shutting down processing monitor complete
+done
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials/launch$ roslaunch beginner_tutorials turtlemimic.launch
+RLException: [turtlemimic.launch] is neither a launch file in package [beginner_tutorials] nor is [beginner_tutorials] a launch file name
+The traceback for the exception was written to the log file
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials/launch$ touch turtlemimic.launch
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials/launch$ roslaunch beginner_tutorials turtlemimic.launch
+... logging to /home/user_en/.ros/log/04ea7dde-ad5d-11e9-bdf2-ecb1d73531a3/roslaunch-lab-29-11860.log
+Checking log directory for disk usage. This may take awhile.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+
+started roslaunch server http://lab-29:44867/
+
+SUMMARY
+========
+
+PARAMETERS
+ * /rosdistro: melodic
+ * /rosversion: 1.14.3
+
+NODES
+  /
+    mimic (turtlesim/mimic)
+  /turtlesim1/
+    sim (turtlesim/turtlesim_node)
+  /turtlesim2/
+    sim (turtlesim/turtlesim_node)
+
+auto-starting new master
+process[master]: started with pid [11870]
+ROS_MASTER_URI=http://localhost:11311
+
+setting /run_id to 04ea7dde-ad5d-11e9-bdf2-ecb1d73531a3
+process[rosout-1]: started with pid [11881]
+started core service [/rosout]
+process[turtlesim1/sim-2]: started with pid [11884]
+process[turtlesim2/sim-3]: started with pid [11889]
+process[mimic-4]: started with pid [11890]
+^C[mimic-4] killing on exit
+[turtlesim2/sim-3] killing on exit
+[turtlesim1/sim-2] killing on exit
+[rosout-1] killing on exit
+[master] killing on exit
+shutting down processing monitor...
+... shutting down processing monitor complete
+done
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials/launch$ roslaunch beginner_tutorials turtlemimic.launch
+... logging to /home/user_en/.ros/log/5db17cce-ad5d-11e9-bdf2-ecb1d73531a3/roslaunch-lab-29-11939.log
+Checking log directory for disk usage. This may take awhile.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+
+started roslaunch server http://lab-29:34365/
+
+SUMMARY
+========
+
+PARAMETERS
+ * /rosdistro: melodic
+ * /rosversion: 1.14.3
+
+NODES
+  /
+    mimic (turtlesim/mimic)
+  /turtlesim1/
+    sim (turtlesim/turtlesim_node)
+  /turtlesim2/
+    sim (turtlesim/turtlesim_node)
+
+auto-starting new master
+process[master]: started with pid [11949]
+ROS_MASTER_URI=http://localhost:11311
+
+setting /run_id to 5db17cce-ad5d-11e9-bdf2-ecb1d73531a3
+process[rosout-1]: started with pid [11960]
+started core service [/rosout]
+process[turtlesim1/sim-2]: started with pid [11964]
+process[turtlesim2/sim-3]: started with pid [11968]
+process[mimic-4]: started with pid [11969]
+rostopic pub /turtlesim1/turtle1/command_velocity turtlesim/Velocity -r 1 -- 2.0  -1.8
+^C[mimic-4] killing on exit
+[turtlesim2/sim-3] killing on exit
+[turtlesim1/sim-2] killing on exit
+[rosout-1] killing on exit
+[master] killing on exit
+shutting down processing monitor...
+... shutting down processing monitor complete
+done
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials/launch$ rostopic pub /turtlesim1/turtle1/command_velocity turtlesim/Velocity -r 1 -- 2.0  -1.8
+ERROR: Unable to communicate with master!
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials/launch$ rostopic pub /turtlesim1/turtle1/command_velocity turtlesim/Velocity -r 1 -- 2.0  -1.8
+the rosdep view is empty: call 'sudo rosdep init' and 'rosdep update'
+ERROR: invalid message type: turtlesim/Velocity.
+If this is a valid message type, perhaps you need to type 'rosmake turtlesim'
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials/launch$ rqt
+roslaunch beginner_tutorials turtlemimic.launch
+^Cuser_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials/launch$ ^C
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials/launch$ roslaunch beginner_tutorials turtlemimic.launch
+... logging to /home/user_en/.ros/log/e164a712-ad5d-11e9-bdf2-ecb1d73531a3/roslaunch-lab-29-12071.log
+Checking log directory for disk usage. This may take awhile.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+
+started roslaunch server http://lab-29:45229/
+
+SUMMARY
+========
+
+PARAMETERS
+ * /rosdistro: melodic
+ * /rosversion: 1.14.3
+
+NODES
+  /
+    mimic (turtlesim/mimic)
+  /turtlesim1/
+    sim (turtlesim/turtlesim_node)
+  /turtlesim2/
+    sim (turtlesim/turtlesim_node)
+
+auto-starting new master
+process[master]: started with pid [12081]
+ROS_MASTER_URI=http://localhost:11311
+
+setting /run_id to e164a712-ad5d-11e9-bdf2-ecb1d73531a3
+process[rosout-1]: started with pid [12092]
+started core service [/rosout]
+process[turtlesim1/sim-2]: started with pid [12096]
+process[turtlesim2/sim-3]: started with pid [12100]
+process[mimic-4]: started with pid [12101]
+
+
+
+
+
+
+
+
+
+
+
+
