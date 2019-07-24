@@ -1,0 +1,182 @@
+user_en@lab-29:~/catkin_ws/src/anro-team-2$ mkdir srv
+user_en@lab-29:~/catkin_ws/src/anro-team-2$ mkdir scripts
+user_en@lab-29:~/catkin_ws/src/anro-team-2$ cd scripts
+user_en@lab-29:~/catkin_ws/src/anro-team-2/scripts$  wget https://raw.github.com/ros/ros_tutorials/kinetic-devel/rospy_tutorials/001_talker_listener/talker.py
+--2019-07-23 17:46:52--  https://raw.github.com/ros/ros_tutorials/kinetic-devel/rospy_tutorials/001_talker_listener/talker.py
+Resolving raw.github.com (raw.github.com)... 151.101.112.133
+Connecting to raw.github.com (raw.github.com)|151.101.112.133|:443... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://raw.githubusercontent.com/ros/ros_tutorials/kinetic-devel/rospy_tutorials/001_talker_listener/talker.py [following]
+--2019-07-23 17:46:52--  https://raw.githubusercontent.com/ros/ros_tutorials/kinetic-devel/rospy_tutorials/001_talker_listener/talker.py
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.112.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.112.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2217 (2.2K) [text/plain]
+Saving to: ‘talker.py’
+
+talker.py            100%[===================>]   2.17K  --.-KB/s    in 0s      
+
+2019-07-23 17:46:52 (24.2 MB/s) - ‘talker.py’ saved [2217/2217]
+
+user_en@lab-29:~/catkin_ws/src/anro-team-2/scripts$ chmod +x talker.py
+user_en@lab-29:~/catkin_ws/src/anro-team-2/scripts$ wget https://raw.github.com/ros/ros_tutorials/kinetic-devel/rospy_tutorials/001_talker_listener/listener.py
+--2019-07-23 17:48:05--  https://raw.github.com/ros/ros_tutorials/kinetic-devel/rospy_tutorials/001_talker_listener/listener.py
+Resolving raw.github.com (raw.github.com)... 151.101.112.133
+Connecting to raw.github.com (raw.github.com)|151.101.112.133|:443... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://raw.githubusercontent.com/ros/ros_tutorials/kinetic-devel/rospy_tutorials/001_talker_listener/listener.py [following]
+--2019-07-23 17:48:05--  https://raw.githubusercontent.com/ros/ros_tutorials/kinetic-devel/rospy_tutorials/001_talker_listener/listener.py
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.112.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.112.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2406 (2.3K) [text/plain]
+Saving to: ‘listener.py’
+
+listener.py          100%[===================>]   2.35K  --.-KB/s    in 0s      
+
+2019-07-23 17:48:05 (22.8 MB/s) - ‘listener.py’ saved [2406/2406]
+
+user_en@lab-29:~/catkin_ws/src/anro-team-2/scripts$ chmod +x listener.py
+user_en@lab-29:~/catkin_ws/src/anro-team-2/scripts$ cd ~/catkin_ws
+user_en@lab-29:~/catkin_ws$ catkin_make
+Base path: /home/user_en/catkin_ws
+Source space: /home/user_en/catkin_ws/src
+Build space: /home/user_en/catkin_ws/build
+Devel space: /home/user_en/catkin_ws/devel
+Install space: /home/user_en/catkin_ws/install
+####
+#### Running command: "make cmake_check_build_system" in "/home/user_en/catkin_ws/build"
+####
+####
+#### Running command: "make -j4 -l4" in "/home/user_en/catkin_ws/build"
+####
+user_en@lab-29:~/catkin_ws$ roscore
+... logging to /home/user_en/.ros/log/66b9d3c6-ad61-11e9-bdf2-ecb1d73531a3/roslaunch-lab-29-14333.log
+Checking log directory for disk usage. This may take awhile.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+
+started roslaunch server http://lab-29:46633/
+ros_comm version 1.14.3
+
+
+SUMMARY
+========
+
+PARAMETERS
+ * /rosdistro: melodic
+ * /rosversion: 1.14.3
+
+NODES
+
+auto-starting new master
+process[master]: started with pid [14343]
+ROS_MASTER_URI=http://lab-29:11311/
+
+setting /run_id to 66b9d3c6-ad61-11e9-bdf2-ecb1d73531a3
+process[rosout-1]: started with pid [14354]
+started core service [/rosout]
+cd ~/catkin_ws
+^C[rosout-1] killing on exit
+[master] killing on exit
+shutting down processing monitor...
+... shutting down processing monitor complete
+done
+user_en@lab-29:~/catkin_ws$ cd ~/catkin_ws
+user_en@lab-29:~/catkin_ws$ source ./devel/setup.bash
+user_en@lab-29:~/catkin_ws$ rosrun beginner_tutorials listener
+[rosrun] Couldn't find executable named listener below /home/user_en/catkin_ws/src/anro-team-2/beginner_tutorials
+user_en@lab-29:~/catkin_ws$ rosrun beginner_tutorials listener
+[rosrun] Couldn't find executable named listener below /home/user_en/catkin_ws/src/anro-team-2/beginner_tutorials
+user_en@lab-29:~/catkin_ws$ cd ~/catkin_ws
+user_en@lab-29:~/catkin_ws$ source ./devel/setup.bash
+user_en@lab-29:~/catkin_ws$ rosrun beginner_tutorials listener
+[rosrun] Couldn't find executable named listener below /home/user_en/catkin_ws/src/anro-team-2/beginner_tutorials
+user_en@lab-29:~/catkin_ws$ touch src/
+anro-team-2/    CMakeLists.txt  
+user_en@lab-29:~/catkin_ws$ touch src/anro-team-2/beginner_tutorials/
+build/          include/        package.xml     
+CMakeLists.txt  launch/         src/            
+user_en@lab-29:~/catkin_ws$ mkdir src/anro-team-2/beginner_tutorials/scripts
+user_en@lab-29:~/catkin_ws$ cd src/anro-team-2/beginner_tutorials/scripts/
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials/scripts$ wget https://raw.github.com/ros/ros_tutorials/kinetic-devel/rospy_tutorials/001_talker_listener/talker.py
+--2019-07-23 17:53:41--  https://raw.github.com/ros/ros_tutorials/kinetic-devel/rospy_tutorials/001_talker_listener/talker.py
+Resolving raw.github.com (raw.github.com)... 151.101.112.133
+Connecting to raw.github.com (raw.github.com)|151.101.112.133|:443... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://raw.githubusercontent.com/ros/ros_tutorials/kinetic-devel/rospy_tutorials/001_talker_listener/talker.py [following]
+--2019-07-23 17:53:41--  https://raw.githubusercontent.com/ros/ros_tutorials/kinetic-devel/rospy_tutorials/001_talker_listener/talker.py
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.112.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.112.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2217 (2.2K) [text/plain]
+Saving to: ‘talker.py’
+
+talker.py            100%[===================>]   2.17K  --.-KB/s    in 0s      
+
+2019-07-23 17:53:41 (19.0 MB/s) - ‘talker.py’ saved [2217/2217]
+
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials/scripts$ ls
+talker.py
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials/scripts$ cat talker.py 
+#!/usr/bin/env python
+# Software License Agreement (BSD License)
+#
+# Copyright (c) 2008, Willow Garage, Inc.
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+#
+#  * Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+#  * Redistributions in binary form must reproduce the above
+#    copyright notice, this list of conditions and the following
+#    disclaimer in the documentation and/or other materials provided
+#    with the distribution.
+#  * Neither the name of Willow Garage, Inc. nor the names of its
+#    contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+# FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+# COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+# INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+# BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+# LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+# CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+# Revision $Id$
+
+## Simple talker demo that published std_msgs/Strings messages
+## to the 'chatter' topic
+
+import rospy
+from std_msgs.msg import String
+
+def talker():
+    pub = rospy.Publisher('chatter', String, queue_size=10)
+    rospy.init_node('talker', anonymous=True)
+    rate = rospy.Rate(10) # 10hz
+    while not rospy.is_shutdown():
+        hello_str = "hello world %s" % rospy.get_time()
+        rospy.loginfo(hello_str)
+        pub.publish(hello_str)
+        rate.sleep()
+
+if __name__ == '__main__':
+    try:
+        talker()
+    except rospy.ROSInterruptException:
+        pass
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials/scripts$ chmod +x talker.py
+user_en@lab-29:~/catkin_ws/src/anro-team-2/beginner_tutorials/scripts$ rosrun beginner_tutorials talker.py
+[INFO] [1563897308.425784]: hello world 1563897308.43
+[INFO] [1563897308.525969]: hello world 1563897308.53
+[INFO] [1563897308.626172]: hello world 1563897308.63
