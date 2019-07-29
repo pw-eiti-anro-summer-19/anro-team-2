@@ -17,13 +17,13 @@
 <joint name="base_joint" type="fixed">
     <parent link="base_link"/>
     <child link="link_0"/>
-    <origin xyz="0.0 0.3 0.6"/>
+    <origin xyz="0.0 0 0"/>
 </joint>
 
   <link name="link_0">
     <visual>
       <geometry>
-        <box size="0.9 1 1"/>
+        <box size="0.9 0.5 0.5"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <material name="white"/>
@@ -33,16 +33,16 @@
   <joint name="joint_0" type="revolute">
     <parent link="link_0"/>
     <child link="link_1"/>
-    <origin xyz="0 0 0"/>
+    <origin xyz="0 0 0.2"/>
     <axis xyz="0 0 1"/>
    <limit effort="30" velocity="1.0" lower="-1" upper="1" />
   </joint>
 
   <link name="link_1">
     <visual>
-      <origin xyz="0 0 1" rpy="0 0 0" />
+      <origin xyz="0 0 0.2" rpy="0 0 0" />
       <geometry>
-        <cylinder length="1.5" radius="0.4"/>
+        <cylinder length="0.5" radius="0.4"/>
       </geometry>
       <material name="red"/>
     </visual>
@@ -51,7 +51,7 @@
   <joint name="joint_1" type="revolute">
     <parent link="link_1"/>
     <child link="link_2"/>
-    <origin xyz="0.03 0.0 0.1"/>
+    <origin xyz="0 0.0 0.4"/>
     <axis xyz="0 1 0"/>
     <limit effort="30" velocity="1.0" lower="-1" upper="1" />
   </joint>
@@ -59,9 +59,9 @@
   <link name="link_2">
     <visual>
       <geometry>
-        <box size="0.6 1.7 0.8"/>
+        <box size="2 0.4 0.4"/>
       </geometry>
-      <origin rpy="0 0.7 0" xyz="0 0 1.5"/>
+      <origin rpy="0 1 1" xyz="0 0 0.7"/>
       <material name="blue"/>
     </visual>
   </link>
@@ -69,18 +69,18 @@
 <joint name="joint_2" type="revolute">
     <parent link="link_2"/>
     <child link="link_3"/>
-    <origin xyz="0.0 0 0"/>
-    <axis xyz="0 0 1.1"/>
-    <limit effort="30" velocity="1.0" lower="-1" upper="1" />
+    <origin xyz=" 0.5 0.5 1"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="10" velocity="1.0" lower="-1" upper="1" />
   </joint>
 
 
   <link name="link_3">
     <visual>
       <geometry>
-        <box size="1 0.7 0.6"/>
+        <box size="0.2 0.7 0.6"/>
       </geometry>
-      <origin rpy="0 0 0" xyz="0 0 1.5"/>
+      <origin rpy="0.6 0.4 0" xyz="0.2 0.5 0.7"/>
       <material name="red"/>
     </visual>
   </link>
